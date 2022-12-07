@@ -1,0 +1,68 @@
+Timestamp,Did you wake up refreshed after your night of sleep?,Do you recall being awake for more than 10 minutes during the night?,"If you answered 'Yes' to the previous question, what did you do during this time?",Did anything in particular prevent you from sleeping earlier last night?,Did anything in particular prevent you from sleeping better?,How did you wake up?,"How many minutes before bedtime did you stop exposing yourself to blue light? (bright phone, TV, etc)","Is there anything important about or related to your night of sleep that was not covered in any of the questions in this questionnaire? If yes, what?"
+9/26/2022,6,1,1 - 4 ,0,0,2,2,0
+9/27/2022,7,1,2,0,0,2,3,0
+9/28/2022,7,1,2,1,0,2,1,0
+9/29/2022,7,1,4,0,0,0,2,0
+9/30/2022,6,1,1 - 4,0,6,2,2,0
+10/1/2022,8,1,1 - 2,0,0,2,0,0
+10/2/2022,7,1,1 - 2 -4  ,1,7,2,3,0
+10/3/2022,8,1,1 - 2 - 4,0,0,2,1,0
+10/4/2022,6,1,2,1,8,2,3,1
+10/5/2022,7,1,2,1,8,2,2,0
+10/6/2022,7,1,2,1,0,0,2,0
+10/7/2022,7,1,2,0,0,2,2,0
+10/8/2022,5,1,2 - 4 ,0,0,2,0,0
+10/9/2022,7,1,2 - 5,1,8,2,3,0
+10/10/2022,7,1,0,0,0,2,1,0
+10/11/2022,7,1,1 - 2,1,1 - 4,2,2,0
+10/12/2022,7,1,1 - 2 ,0,0,2,0,0
+10/13/2022,7,1,1 - 2,0,0,0,2,0
+10/14/2022,7,1,1 - 2 ,0,0,0,1,0
+10/15/2022,7,1,2,0,0,2,3,0
+10/16/2022,7,1,1 - 2,1,0,2,3,0
+10/18/2022,7,1,1 - 2,0,0,2,1,0
+10/19/2022,7,1,1 - 2,1,0,2,1,0
+10/20/2022,6,1,1 - 2,0,0,2,1,0
+10/21/2022,7,1,1 - 2,0,0,0,1,0
+10/22/2022,7,1,1 - 2,0,0,2,1,0
+10/23/2022,7,0,2,0,0,2,1,0
+10/24/2022,6,1,1 - 2,1,0,2,0,0
+10/25/2022,6,1,1 - 2,0,0,2,0,0
+10/26/2022,6,1,1 - 2,0,0,2,0,0
+10/27/2022,5,1,1 - 2,0,0,2,2,0
+10/28/2022,6,0,,1,0,2,0,0
+10/29/2022,7,0,,0,0,2,0,0
+10/30/2022,7,1,1 - 2,1,0,2,0,0
+10/31/2022,7,1,1 - 2,0,0,2,0,0
+11/1/2022,7,1,1 - 2,0,0,2,1,0
+11/2/2022,6,1,1 - 2 - 6 ,1,1 - 4 - 5,2,1,1
+11/3/2022,7,1,1 - 2,0,0,0,2,0
+11/4/2022,7,0,,0,0,2,3,0
+11/5/2022,6,0,,0,0,2,1,0
+11/6/2022,7,1,1 - 2,0,0,2,1,0
+11/7/2022,7,1,2,0,0,2,3,0
+11/8/2022,6,1,1 - 2,0,0,2,3,0
+11/9/2022,5,1,2,0,0,2,0,0
+11/10/2022,7,1,1 - 2,1,0,0,1,0
+11/11/2022,6,1,1 - 2,0,0,0,1,0
+11/12/2022,6,1,1 - 2,0,0,2,0,0
+11/13/2022,5,1,1 - 2,0,0,2,0,0
+11/14/2022,6,0,,0,0,2,1,0
+11/15/2022,7,1,1 - 2,0,0,2,1,1
+11/16/2022,7,1,1 - 2,1,0,2,0,0
+11/17/2022,7,1,1 - 2,0,0,2,1,0
+11/18/2022,6,0,1 - 2,0,0,0,1,0
+11/19/2022,6,1,1 - 2,0,0,2,1,0
+11/20/2022,7,0,,0,0,2,1,0
+11/21/2022,6,1,1 - 2 ,0,0,2,2,0
+11/23/2022,7,1,2,1,0,0,3,0
+,,,,,,,,
+,,,0: I stayed in bed trying to sleep,,0: Nothing,0: With an alarm,0: Less than 15 minutes,
+,,,"1: I used a smart device (phone, laptop...)",,1: Temperature,1: Someone or something else woke me up,1: 15 to 30 minutes,
+,,,2: I went to the toilet,,2: Comfort,2: Naturally,2: 30 to 45 minutes,
+,,,3: I went to drink water,,3: Nap,,3: More than 45 minutes,
+,,,4: I read a book,,4: Noise,,,
+,,,5: Activity,,5: Light,,,
+,,,6: Change environments,,6: Work,,,
+,,,,,7: Worries,,,
+,,,,,8: Other people,,,

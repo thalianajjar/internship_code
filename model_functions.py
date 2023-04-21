@@ -1,8 +1,12 @@
 import pandas as pd
 import numpy as np
 from sklearn.metrics import mean_squared_error
+from sklearn.model_selection import train_test_split, RepeatedKFold
+from sklearn.linear_model import LassoCV, ElasticNetCV
+from sklearn.preprocessing import StandardScaler
 from statistics import mean, stdev
 
+# Function to load all three predictor datasets
 def load_datasets(participant_number, quest_version):
     df = pd.read_csv('data/preprocessed/preprocessed_data_' + str(participant_number) + '_v' + str(quest_version) + '.csv')
     df = df.drop(labels=['actual_day', 'actual_day.1', 'bed_time'], axis=1)
@@ -17,6 +21,48 @@ def load_datasets(participant_number, quest_version):
 
     return df, df_oura, df_quest
 
+# Define the Lasso model used in this project
+def lasso_model(X, y, random_state):
+    # Standardizing the input variables
+    scaler = StandardScaler()
+    X_scaled = scaler.fit_transform(X)
+
+    # Define model evaluation method
+    cv = RepeatedKFold(n_splits=10, n_repeats=3, random_state=1)
+
+    # Splitting train and test data
+    X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size = 0.3, random_state = random_state)
+
+    # Define model
+    alphas = np.arange(0.01, 5, 0.01)
+    model = LassoCV(alphas=alphas, cv=cv, max_iter=10000)
+
+    model.fit(X_train, y_train)
+
+    return model, X_train, X_test, y_train, y_test 
+
+# Define the Elastic Net model used in this project
+def elastic_net_model(X, y, random_state):
+    # Standardizing the input variables
+    scaler = StandardScaler()
+    X_scaled = scaler.fit_transform(X)
+
+    # Define model evaluation method
+    cv = RepeatedKFold(n_splits=10, n_repeats=3, random_state=1)
+
+    # Splitting train and test data
+    X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size = 0.3, random_state = random_state)
+
+    # Define model
+    ratios = np.arange(0, 1, 0.01)
+    alphas = [1e-5, 1e-4, 1e-3, 1e-2, 1e-1, 1.0, 10.0, 100.0]
+    model = ElasticNetCV(l1_ratio=ratios, alphas=alphas, cv=cv, n_jobs=-1)
+    
+    model.fit(X_train, y_train)
+
+    return model, X_train, X_test, y_train, y_test
+
+# Print the resulting model's characteristics
 def print_model(model):
     # Print search results
     print('Model results\nBest alpha value: %s\n' % model.alpha_)
@@ -118,10 +164,11 @@ def multiple_models_average(X, y, n, model_function):
     for i in range(n):
         model, X_train, X_test, y_train, y_test = model_function(X, y, random_state=np.random.randint(50000))
         
-        # Get R squared of model
+        # Get R-squared of model
         r2 = model.score(X_test, y_test)
         r2s.append(round(r2, 3))
 
+        # Get adjusted R-squared of model
         adj_r2 = 1 - (1 - r2) * (len(y) - 1) / (len(y) - X.shape[1] - 1)
         adj_r2s.append(round(adj_r2, 3))
 
